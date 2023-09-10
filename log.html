@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Login</title>
+    <link rel="stylesheet" href="log.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="main">
+        <header>
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <span class="navbar-brand mb-0 h1 text-white">Navbar</span>
+                </div>
+            </nav>
+            <div class="head">
+                <a href="#">HOME</a>
+                <a href="#">CONTACT</a>
+                <a href="#">ABOUT US</a>
+                <button type="button" id="logbtn" class="rounded-pill">LOGIN</button>
+                <button type="button" id="signbtn" class="rounded-pill">SIGNUP</button>
+            </div>
+        </header>
+        <div class="mainpage">
+            <div class="logform">
+                <h2>LOGIN</h2>
+                <div class="input-box">
+                    <input type="email" id="email" required>
+                    <label>EMAIL:</label>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="pass" required>
+                    <label>PASSWORD:</label>
+                </div>
+                <div class="forgot">
+                    <label><input type="checkbox" id="remember"> REMEMBER ME</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="button" id="subbtn" onclick="login()">Submit</button>
+                <p class="card-text text-white mt-4 text-center">By Clicking Submit You Agree To Our Terms And Conditions</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="row" id="cont">
+        <div class="row text-bg-dark mt-1">
+            <div class="col-sm-5 ms-4">
+                <h2>Info Stack</h2>
+            </div>
+            <div class="col-sm-4 mt-1 text-center">
+                <h2>Register</h2>
+            </div>
+        </div>
+        <div class="row mt-2" id="cont1">
+            
+            <div class="col-sm-3 ">
+                <div class="card" style="width:100%;">
+                    <img src="https://plus.unsplash.com/premium_photo-1670252109642-d76c2be775dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" class="card-img-top" style="height:300px;" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4" id="form1">
+                <div class="regform">
+                    <div class="input-box1">
+                        <input type="text" id="uname" required>
+                        <label>username</label>
+                    </div>
+                    <div class="input-box1">
+                        <input type="email" id="newmail" required>
+                        <label>email</label>
+                    </div>
+                    <div class="input-box1">
+                        <input type="password" id="newpass" required>
+                        <label>password</label>
+                    </div>
+                    <div class="input-box1">
+                        <input type="text" id="class" required>
+                        <label>class</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4" id="form2">
+                <div class="regform">
+                    <div class="input-box1">
+                        <input type="text" id="usn" required>
+                        <label>usn</label>
+                    </div>
+                    <div class="input-box1">
+                        <input type="number" id="age" required>
+                        <label>age</label>
+                    </div>
+                    <div class="input-box1">
+                        <input type="text" id="hobby" required>
+                        <label>hobby</label>
+                    </div>
+                    <div class="input-box1">
+                        <input type="text" id="addr" required>
+                        <label>address</label>
+                    </div>
+                </div>
+            </div>
+            <div class="forgot1">
+                <label><input type="checkbox" id="terms"> Agree to our terms and conditions</label>
+                
+            </div>
+            <button type="button" id="regbtn" onclick="save()">Submit</button>
+
+        </div>
+    
+    </div>
+    <div class="row">
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <div class="card" style="width:100%;">
+                    <img src="https://plus.unsplash.com/premium_photo-1681248156422-c01a2c803588?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" class="card-img-top" style="height:300px;" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9 mt-4" id="cont1">
+                <div class="row">
+                    <div class="col-sm-12 text-bg-dark text-center">
+                        <h2><i>Retrive Your Usn</i></h2>
+                    </div>
+                </div>
+                <div class="row mt-1">
+                    <div class="col-sm-12 " id="retrive">
+                        <div class="dataform">
+                            <div class="input-box2">
+                                <input type="text" id="getname" required>
+                                <label>username:</label>
+                            </div>
+                            <button type="button" onclick="get()" id="getdata">GetData</button>
+                        </div>
+                       
+                    </div>     
+                </div>
+                <p class="card-text " id="infotext">Disclaimer: Only The Registered Student Can Enquire</p> 
+            </div>
+        </div>
+    </div>
+    <div class="row" id="cont2">
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <div class="card" style="width:100%;">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="card-img-top" style="height:300px;" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9 mt-4" id="cont1">
+                <div class="row">
+                    <div class="col-sm-12 text-bg-dark text-center">
+                        <h2><i>Erase Your Data</i></h2>
+                    </div>
+                </div>
+                <div class="row mt-1">
+                    <div class="col-sm-12 justify-content-center" id="retrive">
+                        <div class="dataform">
+                            <div class="input-box2">
+                                <input type="text" id="delname" required>
+                                <label>username:</label>
+                            </div>
+                            <button type="button" onclick="drop()" id="getdata">Remove</button>
+                        </div>
+                       
+                    </div>     
+                </div>
+                <p class="card-text " id="infotext">Disclaimer: Only The Registered Student Can Enquire</p> 
+            </div>
+        </div>
+    </div>
+
+
+        
+    <footer class="text-center text-white mt-0" style="background-color: #f1f1f1;">
+        <!-- Grid container -->
+        <div class="container pt-4 mb-1">
+          <img src="https://img.icons8.com/?size=512&id=118467&format=png" alt="22" style="width:30px;height:30px" class="ms-1 me-2">
+          <img src="https://img.icons8.com/?size=512&id=32309&format=png" alt="22" style="width:30px;height:30px" class="ms-2 me-2">
+          <img src="https://img.icons8.com/?size=512&id=446&format=png" alt="22" style="width:30px;height:30px" class="ms-2 me-2">
+          <img src="https://img.icons8.com/?size=512&id=12599&format=png" alt="22" style="width:30px;height:30px"class="ms-1 me-1">
+  
+  
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2020 Copyright:
+          <a class="text-dark" href="#">JGIOP.COM</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+       <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="log.js"></script>
+  </body>
+</html>

@@ -1,0 +1,294 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    
+    top:0;
+    left:0;
+    padding: 10px 50px;
+    width: 100%;
+   
+    font-size: 20px;
+    color:whitesmoke;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.head{
+    display: flex;
+    justify-content:space-between ;
+}
+.head a{
+    position: relative;
+    top: 12px;
+    text-decoration: none;
+    margin-left: 25px;
+    margin-right: 15px;
+    
+}
+.head a::after{
+    content:'';
+    position: absolute;
+    bottom:10px;
+    left:0;
+    width:100%;
+    height: 3px;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s ;
+
+}
+.head a:hover::after{
+    transform:scaleX(1);
+    transform-origin: left;;
+
+}
+#logbtn{
+    border-radius: 20px;
+    border:none;
+    width:70px;
+    height: 50px;
+    margin: 0 12px;
+    padding: 5px;
+    
+}
+#logbtn:hover{
+    background-color: skyblue;
+    color: black;
+    box-shadow: 5px 5px 10px;
+}
+
+#signbtn{
+    border-radius: 20px;
+    border:none;
+    width:90px;
+    height: 50px;
+    margin: 0 12px;
+    padding: 5px;
+}
+#signbtn:hover{
+    background-color: skyblue;
+    color: black;
+    box-shadow: 5px 5px 10px;
+}
+
+.main{
+    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+    position: relative;
+    top:0px;
+    left:0;
+    height: 700px;
+    background-position: center;
+    background-size:cover;
+    position: relative;
+}
+
+.mainpage{
+    position: absolute;
+    top:150px;
+    left:900px;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    background: transparent;
+    backdrop-filter:blur(20px);
+    box-shadow:0 0 40px white;
+    width:350px;
+    height:450px;
+}
+.logform h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.input-box{
+    
+    position: relative;
+    margin:40px 0;
+    border-bottom: 1px solid black;
+    
+    
+}
+
+.input-box label{
+    font-size: 15px;
+    font-weight: bold;
+    position: absolute;
+    top:50%;
+    left:10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: .5s;
+    
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top:-10px;
+}
+
+.input-box input{
+    height: 35px;
+    width:100%;
+    padding:10px;
+}
+.forgot{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 15px;
+    font-weight: bolder;
+    color: azure;
+
+}
+#subbtn{
+    border-radius: 20px;
+    border:none;
+    width:70px;
+    height: 30px;
+    margin-left: 120px;
+}
+#subbtn:hover{
+    background-color: skyblue;
+    color: black;
+    box-shadow: 5px 5px 10px;
+}
+
+
+.input-box1{
+    position:relative;
+    margin:20px 10px;
+    width:100%;
+    padding: 10px;
+}
+.input-box1 input{
+    width:100%;
+    height: 40px;
+    padding: 10px;
+}
+.input-box1 label{
+    position: absolute;
+    top:50%;
+    left:15px;
+    transform: translateY(-50%);
+    transition:.5s;
+    font-size:1em;
+    font-weight: bolder;
+}
+.input-box1 input:focus~label,
+.input-box1 input:valid~label{
+    top:-12px;
+}
+#col1{
+    position: absolute;
+    left:350px;
+    top:3px
+
+}
+#col2{
+    position: absolute;
+    left:900px;
+    top:-7px;
+
+}
+.forgot1{
+    font-size: 1em;
+    text-align: center;
+    text-decoration: underline;
+    position: absolute;
+    bottom: 50px;
+    left:170px
+}
+#regbtn{
+    border-radius: 20px;
+    border:none;
+    width:80px;
+    height: 50px;
+    position: absolute;
+    bottom:0;
+    
+    left:820px
+
+   
+}
+#regbtn:hover{
+    background-color: skyblue;
+    color: black;
+    box-shadow: 5px 5px 10px;
+}
+#cont1{
+    position: relative;
+}
+#cont1 #form1{
+    position: absolute;
+    left:400px;
+}
+#cont1 #form2{
+    position: absolute;
+    left:850px;
+}
+
+#retrive{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:150px;
+    left:11px
+    
+}
+.dataform{
+    width:50%;
+}
+.input-box2{
+    
+    position: relative;
+}
+.input-box2 input{
+    width:100%;
+    height: 45px;
+   
+    
+}
+.input-box2 label{
+    position: absolute;
+    top:20%;
+    left:45px;
+    transform: translateX(-50%);
+    transition:.5s;
+    font-size:1em;
+    font-weight: bolder;
+}
+.input-box2 input:focus~label,
+.input-box2 input:valid~label{
+    top:-27px;
+}
+.dataform button{
+    border-radius: 20px;
+    border:none;
+    width:80px;
+    height: 50px;
+    position: absolute;
+    left:460px;
+    top:70px;
+}
+#getdata:hover{
+    background-color: skyblue;
+    color: black;
+    box-shadow: 5px 5px 10px;
+}
+#infotext{
+    position: absolute;
+    bottom:30px;
+    left:320px;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+
